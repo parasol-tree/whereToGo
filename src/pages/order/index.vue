@@ -1,15 +1,17 @@
 <template>
- 	<div>
- 		order
- 	</div>
+ 	<order-header></order-header>
 </template>
 
 <script>
-	export default {
-	  name: 'order'
-	}
+  import OrderHeader from './header/order-header'
+  export default {
+  	name: 'order',
+  	components: {
+	  OrderHeader
+  	}
+  }
 </script>
 
-<style scoped>
+<style scoped lang="stylus">
 
 </style>
