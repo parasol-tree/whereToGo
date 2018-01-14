@@ -2,7 +2,8 @@
     <div>
         <onedaytour-header></onedaytour-header>
         <onedaytour-menu :categories="categories"
-                          @changerouter="handleRouterChange"
+                          @changeselect="handleSelectChange"
+                          @changesetcity="handleCityChange"
         ></onedaytour-menu>
         <onedaytour-list :list="list"></onedaytour-list>
         <onedaytour-pagination @changePage="handlePageChange"
@@ -27,20 +28,25 @@
     data () {
       return {
         list: [],
-        categories: []
+        categories: [],
+        select: '',
+        city: ''
       }
     },
     methods: {
-      getListInfo (data) {
+      getListInfo () {
         axios.get('/api/onedaytour.json', {
           params: {
-            id: data,
+            id: this.select,
+            city: this.city,
             page: this.$data.page ? this.$data.page : 1,
             size: 10
           }
         })
           .then(this.handleListInfoSucc)
           .catch(this.handleListInfoError)
+      },
+      getSelectInfo () {
         axios.get('/api/categories.json')
           .then(this.handleCateSucc)
           .catch(this.handleCateError)
@@ -51,8 +57,13 @@
       handleCateSucc (res) {
         this.categories = res.data.data.categories
       },
-      handleRouterChange (data) {
-        this.getListInfo(data)
+      handleSelectChange (data) {
+        this.select = data
+        this.getListInfo()
+      },
+      handleCityChange (city) {
+        this.city = city
+        this.getListInfo()
       },
       handlePageChange (page) {
         this.$data['page'] = page
@@ -60,7 +71,8 @@
       }
     },
     created () {
-      this.getListInfo('')
+      this.getListInfo()
+      this.getSelectInfo()
     }
   }
 </script>

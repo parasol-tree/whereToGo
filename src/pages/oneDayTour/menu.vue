@@ -60,15 +60,18 @@
       handlechangeCity (city) {
         this.cityAddress = city
         this.addressShow = !this.addressShow
-        this.setRouter(this.cityAddress)
+        this.setCity(this.cityAddress)
       },
       handleSelectChange (text) {
         this.selectData = text
         this.selectShow = !this.selectShow
-        this.setRouter(this.selectData)
+        this.setSelect(this.selectData)
       },
-      setRouter (data) {
-        this.$emit('changerouter', data)
+      setCity (city) {
+        this.$emit('changesetcity', city)
+      },
+      setSelect (data) {
+        this.$emit('changeselect', data)
       }
     },
     mounted () {
