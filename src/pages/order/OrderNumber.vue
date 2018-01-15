@@ -8,12 +8,17 @@
         <span class="add" @click="addNum"> + </span>
       </div>
     </div>
+    <order-people-comp :listnum="num"></order-people-comp>
   </div>
 </template>
 
 <script>
+  import OrderPeopleComp from './OrderPeople'
   export default {
     name: 'OrderNumber',
+    components: {
+      OrderPeopleComp
+    },
     data () {
       return {
         isShow: true,
@@ -24,23 +29,32 @@
       addNum () {
         if (this.num < 99) {
           this.num++
+          this.sendnumber(this.num)
         }
       },
       subNum () {
         if (this.num > 1) {
           this.num--
+          this.sendnumber(this.num)
         }
+      },
+      sendnumber (num) {
+        this.$emit('sendnum', num)
       }
     },
     watch: {
       num: function () {
         this.isShow = this.num > 1 ? this.isShow = false : this.isShow = true
       }
+    },
+    created () {
+      this.sendnumber(this.num)
     }
   }
 </script>
 
 <style lang="stylus" scoped>
+  @import '../../assets/stylus/variables.styl'
   .number {
     width:100%
     min-height: .5rem;
