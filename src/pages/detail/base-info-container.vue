@@ -1,6 +1,9 @@
 <template>
   <ul class="base-info-container clearfix">
-    <li class="base-info" v-for="item in baseInfoList">
+    <li
+      class="base-info"
+      v-for="item in baseInfoList"
+      ref="baseInfoElem">
       <span class="iconfont">&#xe606;</span>
       {{item.baseInfo}}
       <span class="iconfont icon-address-arrow">&#xe62d;</span>
@@ -13,6 +16,14 @@
     name: 'base-info',
     props: {
       baseInfoList: Array
+    },
+    updated () {
+      // const baseInfoElem = this.$refs.baseInfoElem[0]
+      // const baseInfoElemInfo = baseInfoElem.getBoundingClientRect()
+      // const baseInfoElemOffsetTop = baseInfoElemInfo.top
+      // const baseInfoElemHeight = baseInfoElemInfo.height
+      // const baseInfoContainerComponetnUsedTop = baseInfoElemOffsetTop - (baseInfoElemHeight / 2)
+      // console.log(baseInfoContainerComponetnUsedTop)
     }
   }
 </script>
