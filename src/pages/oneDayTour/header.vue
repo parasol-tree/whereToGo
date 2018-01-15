@@ -19,7 +19,7 @@
     }
 </script>
   
-<style lang='stylus' scaoped>
+<style lang='stylus' scoped>
   @import "../../assets/stylus/variables.styl"
   .header
     display: flex
