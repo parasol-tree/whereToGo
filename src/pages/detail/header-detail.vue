@@ -39,7 +39,6 @@
       window.addEventListener('scroll', this.handleScroll)
     },
     beforeDestroy () {
-      // alert(123)
       window.removeEventListener('scroll', this.handleScroll)
     }
   }
@@ -58,7 +57,6 @@
     left 0px
     z-index 9999999999
     opacity 0
-    // display none//先设置了隐藏,后面再改
     .header-back
       width .8rem
       height .88rem
