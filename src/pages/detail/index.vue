@@ -130,7 +130,7 @@
         this.userReviewsList = data.userReviewsList
         this.someoneElseRecommend = data.someoneElseRecommend
         this.footerDetailInfo = data.footerDetailInfo
-        console.log(this.footerDetailInfo)
+        // console.log(this.footerDetailInfo)
       },
       handlegetDetailPageDataDefeat (error) {
         console.log(error)

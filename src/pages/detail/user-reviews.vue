@@ -94,11 +94,7 @@
       handleHideBottomSwiper () {
         this.showBottomSwiper = !this.showBottomSwiper
       }
-    }/*,
-    computed () {
-      console.log(!!userReviewsList.userReviewsSwiperImgList.length)
-      // return !!userReviewsList.userReviewsSwiperImgList.length
-    }*/
+    }
   }
 </script>
 

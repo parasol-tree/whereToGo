@@ -14,7 +14,12 @@
         </em>
       </div>
     </div>
-    <span class="iconfont icon-back">&#xe623;</span>
+    <span
+      class="iconfont icon-back"
+      ref="iconBack"
+      @click="handleIconBackHide">
+      &#xe623;
+    </span>
 
     <div
       class="user-reviews-img-swiper-container"
@@ -55,7 +60,19 @@
       },
       handleHideSwiper () {
         this.showTopSwiper = !this.showTopSwiper
+      },
+      handleIconBackHide () {
+        const iconBackElem = this.$refs.iconBack
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+        iconBackElem.style.opacity = scrollTop > 0 ? 0 : 1
       }
+    },
+    beforeMount () {
+      window.addEventListener('scroll', this.handleIconBackHide)
+    },
+    beforeDestroy () {
+      // alert(123)
+      window.removeEventListener('scroll', this.handleIconBackHide)
     }
   }
 </script>
