@@ -7,6 +7,9 @@ import Detail from '@/pages/detail'
 import OneDayTour from '@/pages/oneDayTour'
 import Order from '@/pages/order'
 
+import DetailIntroduce from '@/pages/detailIntroduce'
+import SceneryLocationMap from '@/pages/sceneryLocationMap'
+
 Vue.use(Router)
 
 export default new Router({
@@ -35,6 +38,16 @@ export default new Router({
       path: '/order',
       name: 'Order',
       component: Order
+    },
+    {
+      path: '/detailIntroduce',
+      name: 'DetailIntroduce',
+      component: DetailIntroduce
+    },
+    {
+      path: '/sceneryLocationMap',
+      name: 'SceneryLocationMap',
+      component: SceneryLocationMap
     }
   ]
 })

@@ -21,7 +21,8 @@
   export default {
     name: 'header-detail',
     props: {
-      header: Object
+      header: Object,
+      top: Number
     },
     methods: {
       handleBack () {
@@ -30,7 +31,7 @@
       handleScroll () {
         const header = this.$refs.header
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-        let BodyscrollTop = scrollTop / 233
+        let BodyscrollTop = scrollTop / this.top
         BodyscrollTop = BodyscrollTop > 1 ? 1 : BodyscrollTop
         header.style.opacity = BodyscrollTop
       }

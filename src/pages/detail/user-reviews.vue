@@ -85,8 +85,8 @@
         this.isShowMore = !this.isShowMore
         const liElem = this.$refs.seeMoreElem[index]
         const changeIcon = this.$refs.changeIcon[index]
-        this.isShowMore ? liElem.style.height = 'auto' : liElem.style.height = '2.05rem'
-        this.isShowMore ? changeIcon.innerHTML = '&#xe62e;' : changeIcon.innerHTML = '&#xe62f;'
+        liElem.style.height = this.isShowMore ? 'auto' : '2.05rem'
+        changeIcon.innerHTML = this.isShowMore ? '&#xe62e;' : '&#xe62f;'
       },
       handleShowReviewsSwiper () {
         this.showBottomSwiper = !this.showBottomSwiper

@@ -19,8 +19,8 @@
         ¥
         <em class="ticket-price">{{item.price}}</em>
         <span class="ticket-num-word">起</span>
+        <span class="iconfont icon-down-arrow">&#xe62f;</span>
       </div>
-      <span class="iconfont icon-down-arrow">&#xe62f;</span>
     </li>
 
     <li
@@ -119,15 +119,16 @@
             line-height .32rem
             color #888
       .ticket-price-container
-        right .46rem
+        width 21%
+        height .4rem
         margin-top -.28rem
-        color #ff9800
-        font-size .24rem
-        overflow hidden
         position absolute
         top 50%
-        height .4rem
+        right .2rem
+        font-size .24rem
         line-height .4rem
+        color #ff9800
+        overflow hidden
         .ticket-price
           margin-left .04rem
           font-size .36rem
@@ -135,17 +136,16 @@
           display inline-block
           color #9e9e9e
           font-size .24rem
-      .icon-down-arrow
-        height .4rem
-        line-height .4rem
-        font-size .24rem
-        color #bbb
-        white-space nowrap
-        overflow hidden
-        // margin-top -.22rem
-        position absolute
-        right .2rem
-        top 25%
+        .icon-down-arrow
+          height .4rem
+          line-height .4rem
+          font-size .24rem
+          color #bbb
+          white-space nowrap
+          overflow hidden
+          position absolute
+          right .2rem
+          top 25%
     .see-more-product
       width 100%
       position absolute
