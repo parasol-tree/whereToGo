@@ -1,11 +1,11 @@
 <template>
   <div class="page-main clearfix">
-    <header-detail :header="header"></header-detail>
+    <header-detail :header="header" :top="top"></header-detail>
 
     <div class="content clearfix">
       <top-figure :banner="banner"></top-figure>
 
-      <base-info-container :baseInfoList="baseInfoList"></base-info-container>
+      <base-info-container :baseInfoList="baseInfoList" @changeOpacity="handlechangeOpacity"></base-info-container>
 
       <comments-info-container :commentsInfo="commentsInfo"></comments-info-container>
 
@@ -97,7 +97,8 @@
         oneDayTour: {},
         userReviewsList: {},
         someoneElseRecommend: {},
-        footerDetailInfo: {}
+        footerDetailInfo: {},
+        top: 0
       }
     },
     created () {
@@ -130,10 +131,12 @@
         this.userReviewsList = data.userReviewsList
         this.someoneElseRecommend = data.someoneElseRecommend
         this.footerDetailInfo = data.footerDetailInfo
-        // console.log(this.footerDetailInfo)
       },
       handlegetDetailPageDataDefeat (error) {
         console.log(error)
+      },
+      handlechangeOpacity (top) {
+        this.top = top
       }
     }
   }

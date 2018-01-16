@@ -16,7 +16,10 @@
           </ol>
           <ol class="ticket-item-info ticket-item-info-right">
             <li class="ticket-link">
-              <em class="price-num">&#165;{{item.priceNum}}</em>
+              <em class="price-container">
+                &#165;
+                <i class="price">{{item.priceNum}}</i>
+              </em>
               <em class="reserve">{{item.reserve}}</em>
             </li>
           </ol>
@@ -68,7 +71,6 @@
         border-top .03rem solid #ccc
         background-color #fff
         .ticket-item-info
-          align-items center
           padding .08rem 0
         .ticket-item-info-left
           flex 2.92
@@ -101,7 +103,7 @@
             justify-content flex-start
             width 100%
             padding 0 .2rem
-            .price-num
+            .price-container
               display block
               height .32rem
               font-size .24rem
@@ -109,6 +111,12 @@
               text-align center
               font-weight 400
               overflow hidden
+              color #ff9800
+              .price
+                margin-left .04rem
+                font-size .32rem
+                line-height .3rem
+                color #ff9800
             .reserve
               height .6rem
               border-radius .06rem

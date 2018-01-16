@@ -68,12 +68,14 @@
         {
           "id": "001",
           "iconLeft": "",
-          "baseInfo": "北京市东城区景山前街4号"
+          "baseInfo": "北京市东城区景山前街4号",
+          "link": "/sceneryLocationMap"
         },
         {
           "id": "002",
           "iconLeft": "&#xe604;",
-          "baseInfo": "查看景点简介及开放时间"
+          "baseInfo": "查看景点简介及开放时间",
+          "link": "/detailIntroduce"
         }
       ],
       "commentsInfo": {
@@ -122,6 +124,35 @@
             "ticketInfoName": "故宫+珍宝馆+钟表馆",
             "relyOnIdCardEnterPark": "凭身份证入园",
             "ticketPrice": "60"
+          }
+        ],
+        "showReservation": [
+          {
+            "id": "0000001",
+            "title": "去哪儿直销",
+            "hintTitle": "【上午场】故宫成人票凭身份证入园",
+            "hintInfoOne": "可订明日",
+            "hintInfoTwo": "条件退",
+            "price": "50",
+            "reservationBtn": "预定"
+          },
+          {
+            "id": "0000002",
+            "title": "去哪儿直销",
+            "hintTitle": "【上午场】故宫成人票凭身份证入园",
+            "hintInfoOne": "可订明日",
+            "hintInfoTwo": "条件退",
+            "price": "20",
+            "reservationBtn": "预定"
+          },
+          {
+            "id": "0000003",
+            "title": "去哪儿直销",
+            "hintTitle": "【上午场】故宫成人票凭身份证入园",
+            "hintInfoOne": "可订明日",
+            "hintInfoTwo": "条件退",
+            "price": "70",
+            "reservationBtn": "预定"
           }
         ]
       },
