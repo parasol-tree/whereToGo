@@ -19,7 +19,6 @@
       </div>
     </div>
   </div>
->>>>>>> 20180111-order-jiangzhixin
 </template>
 
 <script>
