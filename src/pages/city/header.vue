@@ -1,12 +1,12 @@
 <template>
   <div class="header">
-    <router-link to="/index">
-    <div class="back iconfont">&#xe624;</div>
-  </router-link>
-  <div class="country">
-    <div class="domestic">国内</div>
-    <div class="overseas">海外</div>
-  </div>
+    <router-link to="/">
+      <div class="back iconfont">&#xe623;</div>
+    </router-link>
+    <div class="country">
+      <div class="domestic">国内</div>
+      <div class="overseas">海外</div>
+    </div>
   </div>
 </template>
 

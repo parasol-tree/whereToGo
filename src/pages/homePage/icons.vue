@@ -13,6 +13,9 @@
       </swiper-slide>
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
+    <router-link to="/oneDayTour" class="oneDayTour">
+      一日游
+    </router-link>
   </div>
 </template>
 
@@ -67,4 +70,12 @@ export default {
             margin-top: .16rem
             color: #333
             font-size: .28rem
+  .oneDayTour
+    display block
+    height 1rem
+    font-size .32rem
+    line-height 1rem
+    text-align center
+    color #fff
+    background-color skyblue
 </style>

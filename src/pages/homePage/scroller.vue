@@ -1,8 +1,13 @@
 <template>
   <div ref="scroller">
     <div class="content">
-      <div class="item" v-for="item in sights" :key="item.id">
-        <img :src="item.imgUrl" class="item-img">
+
+      <div class="item"
+        v-for="item in sights"
+        :key="item.id"
+        @click="toGoDetail(item.id)"
+        >
+          <img :src="item.imgUrl" class="item-img">
         <div class="item-content">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
@@ -23,6 +28,12 @@ export default {
   name: 'index-scroller',
   props: {
     sights: Array
+  },
+  methods: {
+    toGoDetail (id) {
+      // console.log(id)
+      this.$router.push({name: 'Detail', params: {id: id}})
+    }
   },
   mounted () {
     this.scroller = new BSsroll(this.$refs.scroller)
