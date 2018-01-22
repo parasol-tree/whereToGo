@@ -146,6 +146,16 @@
           position absolute
           right .2rem
           top 25%
+      .icon-down-arrow
+          height .4rem
+          line-height .4rem
+          font-size .24rem
+          color #bbb
+          white-space nowrap
+          overflow hidden
+          position absolute
+          right .2rem
+          top 25%
     .see-more-product
       width 100%
       position absolute
@@ -158,4 +168,15 @@
       line-height 1.4rem
       text-align center
       z-index 999
+      .icon-down-arrow
+        display block
+        height 0.4rem
+        line-height 0.4rem
+        font-size 0.24rem
+        color #bbb
+        white-space nowrap
+        overflow hidden
+        position absolute
+        right 0.2rem
+        top 25%
 </style>
