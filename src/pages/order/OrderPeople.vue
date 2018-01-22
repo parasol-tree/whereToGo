@@ -13,11 +13,11 @@
       <div class="order-phone">
         <span >手机号</span>
         <span>+86></span>
-        <input type="text" placeholder="请填写手机号">
+        <input type="text" placeholder="请填写手机号" @blur="checkOutPhone">
       </div>
       <div class="order-code">
         <span><span class="code">身份证 ></span></span>
-        <input type="text" placeholder="请填写正确的身份证号码">
+        <input type="text" placeholder="请填写正确的身份证号码" @blur="checkOutCode">
       </div>
     </li>
     <li v-for="(item,index) of (listnum-1)">
@@ -59,7 +59,7 @@
         this.checkout.name = reg.test(this.namevalue)
         console.log(this.checkout.name)
       },
-      checkOutOhone () {
+      checkOutPhone () {
         var reg = /^\d{11}$/
         this.checkout.phone = reg.test(this.phonevalue)
         console.log(this.checkout.phone)
@@ -94,7 +94,7 @@
           color: #616161
           font-size: .3rem
           line-height: .5rem
-          .code{
+          .code {
             float:left
             height:100%;
             min-width: .24rem
