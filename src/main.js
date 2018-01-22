@@ -10,9 +10,12 @@ import 'assets/style/reset.css'
 import 'assets/style/iconfont/iconfont.css'
 import 'assets/stylus/variables.styl'
 
-FastClick.attach(document.body)
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
 
-Vue.config.productionTip = false
+Vue.use(VueAwesomeSwiper)
+
+FastClick.attach(document.body)
 
 /* eslint-disable no-new */
 new Vue({
